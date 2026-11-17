@@ -1,0 +1,109 @@
+LOSS_NN_MODE: agent
+LOSS_REG_REDUCTION: sum
+LOSS_REG_SQUARED: false
+LOSS_VELOCITY: false
+MODEL:
+  CLASSIFICATION_MLPS:
+  - 128
+  - 128
+  - 1
+  CONTEXT_ENCODER:
+    AGENTS: 2
+    DROPOUT_OF_ATTN: 0.1
+    D_MODEL: 128
+    NAME: ETHEncoder
+    NUM_ATTN_HEAD: 8
+    NUM_ATTN_LAYERS: 4
+    NUM_CHANNEL_IN_MLP_AGENT: 256
+    NUM_INPUT_CONTEXT: 6
+    NUM_LAYER_IN_MLP_AGENT: 3
+    SOCIAL_IN_DIM: 48
+  DROPOUT: null
+  MODEL_OUT_DIM: 180
+  MOE:
+    AUX_LOSS_WEIGHT: 0.1
+    DECODER_MOE: true
+    ENCODER_MOE: false
+    NUM_EXPERTS: 4
+    TOP_K: 2
+  MOTION_DECODER:
+    DROPOUT_OF_ATTN: 0.1
+    D_MODEL: 128
+    NAME: MTRDecoder
+    NUM_ATTN_HEAD: 8
+    NUM_DECODER_BLOCKS: 4
+  NUM_LAYERS: null
+  NUM_PROPOSED_QUERY: 20
+  REGRESSION_MLPS:
+  - 128
+  - 256
+  - 180
+  USE_PRE_NORM: false
+OPTIMIZATION:
+  GRAD_NORM_CLIP: 1.0
+  LOSS_WEIGHTS:
+    cls: 1.0
+    reg: 1.0
+    vel: 0.2
+  LR: 0.0001
+  LR_CLIP: 1.0e-06
+  NUM_EPOCHS: 150
+  OPTIMIZER: AdamW
+  SCHEDULER: cosineAnnealingLRwithWarmup
+  WEIGHT_DECAY: 0.01
+agents: 2
+checkpt_freq: 1
+data_norm: min_max
+dataset: giga
+denoising_head_preds: 20
+denoising_method: fm
+description: Correlated FlowMatching
+device: cuda
+drop_logi_k: 20.0
+drop_logi_m: 0.5
+drop_method: emb
+eval_frames:
+- 30
+- 60
+- 90
+fm_in_scaling: true
+fm_rew_sqrt: false
+fm_wrapper: direct
+future_frames:
+- 30
+- 60
+- 90
+k_preds: 20
+logit_norm_mean: -0.5
+logit_norm_std: 1.5
+max_future_frames: 90
+max_num_ckpts: 5
+max_past_frames: 8
+notes: Flow Matching
+objective: pred_data
+past_frames: 8
+results_root_dir: outputs/giga
+rotate: true
+rotate_aug: false
+rotate_time_frame: 6
+sampling_steps: 10
+sigma_data: 0.13
+subset: giga
+t_schedule: logit_normal
+test_batch_size: 48
+test_future_frames: 90
+test_past_frames: 8
+tied_noise: true
+train_batch_size: 24
+use_vqvae: true
+use_wandb: false
+vq_beta: 0.25
+vq_code_dim: 256
+vq_loss_weight: 0.1
+vq_num_codes: 64
+vq_rec_weight: 0.1
+wandb_project: anonymous-teacher
+wandb_entity: ''
+wandb_run_name: ''
+wandb_notes: ''
+wandb_tags: []

@@ -1,0 +1,160 @@
+{
+  "scope": "Teacher models, training and evaluation only; no datasets or weights.",
+  "source_files": [
+    {
+      "file": "models/flow_matching.py",
+      "original_sha256": "6bd41633e2ea3bfe9e5908d2f3b4f9f19975bdf61ff2ca32a3c084bf1b24e987",
+      "packaged_sha256": "deb9eab5463bcf5e3bbb0414c3a3fe20aeb48320e975303dd9adb146849c8436",
+      "change": "Unmodified source. Updated the import to the renamed MDS/PTR source module."
+    },
+    {
+      "file": "models/mds.py",
+      "original_sha256": "ed0ce1950f35cf40a76233cd5b8f29d02af373ab2b473db7bb9536c7facbc7f1",
+      "packaged_sha256": "ed0ce1950f35cf40a76233cd5b8f29d02af373ab2b473db7bb9536c7facbc7f1",
+      "change": "Renamed the source module; numerical implementation and class names unchanged.",
+      "original_file": "models/moe.py"
+    },
+    {
+      "file": "models/ptr.py",
+      "original_sha256": "45e21d0c2c8b6d6674079688214489542022d0cae0f1ae5c1bc76137efc6014c",
+      "packaged_sha256": "45e21d0c2c8b6d6674079688214489542022d0cae0f1ae5c1bc76137efc6014c",
+      "change": "Renamed the source module; numerical implementation and class names unchanged.",
+      "original_file": "models/vqvae.py"
+    },
+    {
+      "file": "models/motion_decoder/__init__.py",
+      "original_sha256": "2d96bd1a13becc5766e053ffca90f5dc52aace6f09dc1ba3fff983ff92325791",
+      "packaged_sha256": "2d96bd1a13becc5766e053ffca90f5dc52aace6f09dc1ba3fff983ff92325791",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "models/motion_decoder/mtr_decoder.py",
+      "original_sha256": "764adad193156c97f5b99b59cf32f5737ac5e66ddc828b7b5f96aaa4eb406ed5",
+      "packaged_sha256": "e7df8485ad5d9494ef242ce629d6dc0ef16cebb45f665fb580f66e0a6c022d0f",
+      "change": "Unmodified source. Updated the import to the renamed MDS/PTR source module."
+    },
+    {
+      "file": "models/context_encoder/eth_encoder.py",
+      "original_sha256": "0c92ae5435d53b0995cd628be3451013e3da0445b9897e2bc4fb791d483ff55f",
+      "packaged_sha256": "c8879f7b3b439baa2f94b730e8cacb051acc63a7f2bffe18e87175d132f0cea7",
+      "change": "Unmodified source. Updated the import to the renamed MDS/PTR source module."
+    },
+    {
+      "file": "models/utils/common_layers.py",
+      "original_sha256": "c96f2f1e50615f97a4816556cf990aa157ce41c53f1b5484885165e2e7756c9d",
+      "packaged_sha256": "c96f2f1e50615f97a4816556cf990aa157ce41c53f1b5484885165e2e7756c9d",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "utils/normalization.py",
+      "original_sha256": "2a423235e088775e87c8d099e245b64583e2c8075c8afb9e32f04b75dab3ff5e",
+      "packaged_sha256": "2a423235e088775e87c8d099e245b64583e2c8075c8afb9e32f04b75dab3ff5e",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "trainer/denoising_model_trainers.py",
+      "original_sha256": "212f00586af275cbcd44dcc72aba890a6c28e1aa58a0f83c70a7d0f31a6804d3",
+      "packaged_sha256": "0b94e096ce813ed6da7234e8992e5f024073e7d3ce4c5fb350dda92bcf3f9a4b",
+      "change": "Added a CPU wall-clock fallback for evaluation timing. Training, optimizer, forecasting, checkpoint selection and metric calculations are unchanged."
+    },
+    {
+      "file": "fm_eth.py",
+      "original_sha256": "1d08601fda78efb0fb2ebec97dde2e16ed124a910f2ff84eb14c7a51c8e5d63f",
+      "packaged_sha256": "1d08601fda78efb0fb2ebec97dde2e16ed124a910f2ff84eb14c7a51c8e5d63f",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "fm_sdd.py",
+      "original_sha256": "188a85a07ce03994d100b50aec9b1bbe31526271707051322908626a304fd935",
+      "packaged_sha256": "188a85a07ce03994d100b50aec9b1bbe31526271707051322908626a304fd935",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "fm_giga.py",
+      "original_sha256": "6a8c7000e6f48bb4c49a4a4aab057ec7a85e1521122a476519bbe33a0172f448",
+      "packaged_sha256": "6a8c7000e6f48bb4c49a4a4aab057ec7a85e1521122a476519bbe33a0172f448",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "eval_eth.py",
+      "original_sha256": "1a83897b29282a466c5805b3c28942e820811f7be0ed57e772525b076b0c9ec1",
+      "packaged_sha256": "1a83897b29282a466c5805b3c28942e820811f7be0ed57e772525b076b0c9ec1",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "eval_sdd.py",
+      "original_sha256": "91a485a164bd59712244e08464b8c3a7b38842fbb017e6fa65cbd17b0893e7ff",
+      "packaged_sha256": "91a485a164bd59712244e08464b8c3a7b38842fbb017e6fa65cbd17b0893e7ff",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "eval_giga.py",
+      "original_sha256": "9c8d99d0a94ac0f1407c7c46044c1991c9117ca9160f9ddf7bc05a94acb67cea",
+      "packaged_sha256": "9c8d99d0a94ac0f1407c7c46044c1991c9117ca9160f9ddf7bc05a94acb67cea",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "models/backbone_eth_ucy.py",
+      "original_sha256": "aa17ae1caf9258592e1e9f790ebb5f0610ea87fefa8c6bd879ea2c5a02a76517",
+      "packaged_sha256": "5dc84aa7bffbfe1dc8fd27185d8f40605cc3e60c8e27d39aca3b9a2b2e730ea0",
+      "change": "Removed only the unused ETHIMLETransformer student class; teacher class preserved verbatim."
+    },
+    {
+      "file": "models/context_encoder/mtr_encoder.py",
+      "original_sha256": "623eee8f650b5627349cb664c2b79cffc2e26b52196ccfae2ef766995a944375",
+      "packaged_sha256": "cc0f3e8220043efa56d6f59c3ee35e83696ba140f6ec33af29233bb878d80616",
+      "change": "Kept the original sinusoidal time embedding; removed an unused encoder for other datasets."
+    },
+    {
+      "file": "data/dataloader_eth_ucy.py",
+      "original_sha256": "38ee9b67f2c5d51db66b6c74e5cf9d0144680b6bfec7c832b83e207b1e092a88",
+      "packaged_sha256": "2253a9af77bdab45a5ac6e0643581c604fcd7a12d589adc5466ce540affdfffe",
+      "change": "Removed unused student/distillation branches and collators; retained the teacher preprocessing and masks (validated against original)."
+    },
+    {
+      "file": "data/dataloader_sdd.py",
+      "original_sha256": "2b27850e03b0c033f24cad80644e524a39a512f0ed1e613a9dc45339a42cde64",
+      "packaged_sha256": "5a0b5a471b17ea7dce0886c15a9b5bbf02df45e95bd1cc75c0dc2a7c1b714505",
+      "change": "Removed unused student/distillation branches and collators; retained the teacher preprocessing and masks (validated against original)."
+    },
+    {
+      "file": "data/dataloader_giga.py",
+      "original_sha256": "86d2f0618e3939cc4d9ab2fe4ca1d5e3c7138251f27366104ebb6f7933c45fcd",
+      "packaged_sha256": "c142e254c7f1593f00a67f4653309fc21fca33d6e2c804f90ed4e6a45d7713eb",
+      "change": "Removed unused student/distillation branches and collators; retained the teacher preprocessing and masks (validated against original)."
+    },
+    {
+      "file": "utils/utils.py",
+      "original_sha256": "6994cb9e12f66916fc291e6f2d8f1b5fcf42c482112dec996d3000c1cd198271",
+      "packaged_sha256": "e334bae3795d580cdeec5ff1962a1fcb5c332645e8f4d02e2216fae819d50190",
+      "change": "Replaced Git-dependent backup with a source-only snapshot; no Git metadata is required or recorded. Numerical helpers unchanged."
+    },
+    {
+      "file": "utils/config.py",
+      "original_sha256": "6f7d8b78d34dc9b6f828fdbbe793691ffa752eadc72481442e0a6d909ec2f9d0",
+      "packaged_sha256": "03c348f6669c47b54f0c1ae011a1a15f91544f8189c83e9a018e9b4c6e89c7d2",
+      "change": "Used shutil.copy2 for configuration copying so paths with spaces work."
+    },
+    {
+      "file": "models/utils/polyline_encoder.py",
+      "original_sha256": "0d9d54fc0bd3148a6a67ed9f9c5581275aa814c038b689da4e58a5698acd7b37",
+      "packaged_sha256": "0d9d54fc0bd3148a6a67ed9f9c5581275aa814c038b689da4e58a5698acd7b37",
+      "change": "Unmodified source."
+    },
+    {
+      "file": "models/context_encoder/__init__.py",
+      "original_sha256": "fd9463a81337d2f94c209945ef89963c2c2e215f8df8222cbff2a1aa3518a138",
+      "packaged_sha256": "f5bb949dcce1d2ab74722b35f5f2140ebfdd6be2b773a45158683977ea998cbf",
+      "change": "Restricted the encoder registry to the teacher encoder used by the three included datasets."
+    }
+  ],
+  "configuration_notes": {
+    "eth_ucy": "Repository teacher configuration, with anonymous logging/output settings.",
+    "sdd": "Repository teacher configuration, with anonymous logging/output settings.",
+    "giga": "Exact hyperparameters from the fixed checkpoint used for dense horizon evaluation; restored 64 codes / 256 latent dimensions. Local paths and logger identity removed; default evaluation history set to 8."
+  },
+  "module_renames": {
+    "models/moe.py": "models/mds.py",
+    "models/vqvae.py": "models/ptr.py"
+  }
+}

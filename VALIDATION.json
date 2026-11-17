@@ -1,0 +1,47 @@
+{
+  "scope": "Teacher model, training and evaluation only.",
+  "datasets_included": false,
+  "weights_included": false,
+  "student_models_included": false,
+  "synthetic_checks_are_benchmark_results": false,
+  "core_teacher_math_preserved": true,
+  "teacher_loader_parity": [
+    "eth_ucy",
+    "sdd",
+    "giga"
+  ],
+  "loader_parity_fixture": "Synthetic inputs only; normalization, train/test preprocessing, latest-history masks and sampled lengths match the original.",
+  "source_backup_without_git": true,
+  "source_syntax": "pass",
+  "anonymization_scan": "pass",
+  "dataset_and_weight_scan": "pass",
+  "teacher_cli_help": "7 entry points pass",
+  "synthetic_forward_backward_optimizer_sampling": "all 3 dataset configurations pass",
+  "ptr_not_executed_during_inference": true,
+  "giga_existing_checkpoint_cpu_strict_load": "pass",
+  "status": "pass",
+  "archive_extraction": "pass",
+  "standalone_one_epoch_training_on_synthetic_fixtures": [
+    "eth_ucy",
+    "sdd",
+    "giga"
+  ],
+  "standalone_fixed_checkpoint_evaluation_on_synthetic_fixtures": [
+    "eth_ucy",
+    "sdd",
+    "giga"
+  ],
+  "standalone_original_evaluation_on_synthetic_fixtures": [
+    "eth_ucy",
+    "sdd",
+    "giga"
+  ],
+  "validation_note": "Only small synthetic software checks and a CPU load check of an existing GigaTraj checkpoint were performed; no benchmarks were rerun.",
+  "readme_title": "UniMH",
+  "module_rename_smoke_check": "all three configurations pass",
+  "existing_checkpoint_load_after_module_rename": "pass",
+  "module_paths": [
+    "models/mds.py",
+    "models/ptr.py"
+  ]
+}
