@@ -360,7 +360,6 @@ class Trainer(object):
         return ade_best, fde_best, ade_avg, fde_avg
     
     ### TODO: add the eval of JADE/JFDE
-    ### Based on https://arxiv.org/abs/2305.06292 Joint metric for ADE and FDE
     def compute_JADE_JFDE(self, distances, end_frame):
         '''
         Helper function to compute JADE and JFDE
