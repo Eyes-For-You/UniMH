@@ -9,16 +9,12 @@ observation history and required prediction range vary across scenarios. We form
 multi-horizon trajectory prediction*, where a single model jointly handles multiple
 observation–prediction horizon pairs without configuration-specific retraining. This task
 requires modeling horizon-dependent motion distributions while preserving reusable trajectory
-structures across configurations.
-
-To this end, we propose **UniMH**, a Transformer-based framework with two complementary
+structures across configurations.To this end, we propose **UniMH**, a Transformer-based framework with two complementary
 components. Motion Distribution Specialization (MDS) replaces standard feed-forward networks
 with horizon-aware sparse expert routing, enabling feature transformations to adapt to local
 motion context and temporal requirements. Prototype-Guided Trajectory Regularization (PTR)
 introduces a training-only VQ-VAE branch with a shared learnable codebook, which regularizes
-predicted trajectories through reconstruction and quantization objectives.
-
-Experiments on ETH-UCY, SDD, and GigaTraj demonstrate that UniMH achieves strong performance
+predicted trajectories through reconstruction and quantization objectives.Experiments on ETH-UCY, SDD, and GigaTraj demonstrate that UniMH achieves strong performance
 using one shared checkpoint across diverse horizon configurations. Its advantages are
 particularly consistent at long prediction horizons, where trajectory uncertainty and
 accumulated drift are most pronounced.
