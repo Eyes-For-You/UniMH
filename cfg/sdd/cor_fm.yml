@@ -84,8 +84,3 @@ OPTIMIZATION:
     cls: 1.0
     reg: 1.0
     vel: 0.2
-wandb_project: anonymous-teacher
-wandb_entity: ''
-wandb_run_name: ''
-wandb_notes: ''
-wandb_tags: []

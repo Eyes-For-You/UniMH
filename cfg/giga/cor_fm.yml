@@ -102,8 +102,3 @@ vq_code_dim: 256
 vq_loss_weight: 0.1
 vq_num_codes: 64
 vq_rec_weight: 0.1
-wandb_project: anonymous-teacher
-wandb_entity: ''
-wandb_run_name: ''
-wandb_notes: ''
-wandb_tags: []
